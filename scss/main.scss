@@ -1,0 +1,22 @@
+// Utilidades
+@import "parciales/utilities/variables";
+@import "parciales/utilities/mixins";
+
+
+// Contenido
+@import "parciales/header";
+@import "parciales/index";
+@import "parciales/carrusel";
+@import "parciales/productos";
+@import "parciales/nosotros";
+@import "parciales/proyecto";
+@import "parciales/contacto";
+@import "parciales/footer";
+@import "parciales/error";
+
+// Base
+@import "parciales/base/reset";
+@import "parciales/base/layout";
+@import "parciales/base/typo";
+@import "parciales/base/generales";
+@import "parciales/base/mediaqueries";

@@ -1,0 +1,101 @@
+// Inicio
+.main__sections {
+    &__2 { // Bienvenido al nuevo Mercado de Videojuegos
+        background-color: $bg-color;
+        margin-top: 1.5rem;
+        &__h2 {
+            letter-spacing: .2rem;
+            text-shadow: 0 0 6px #000;
+            @include spacing(6rem, 4.2rem);
+            .my-titulo {
+                font-weight: 400;
+                color: hsl(0, 0%, 70%);
+            }
+        }
+    }
+    &__flex {
+        display: flex;
+        margin-top: 5rem;
+        justify-content: space-evenly;
+        align-items: center;
+        div {
+            margin: 2rem 0;
+        }
+        &__left {
+            width: 45rem;
+            display: flex;
+            flex-direction: column;
+            &__h1 {
+                text-align: start;
+                line-height: 1.2;
+                text-shadow:-3px 4px 0 $color-primary, 
+                            -6px 8px 0 rgba(0, 0, 0, 0.4);
+                font-size: 6rem;
+                margin-bottom: 2.5rem;
+            }
+            &__p {
+                text-align: start;
+                font-weight: 700;
+                text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+                            0px 8px 13px rgba(0, 0, 0, 0.3),
+                            0px 18px 23px rgba(0, 0, 0, 0.1);
+            }
+        }
+        &__right {
+            &__img {
+                @include imagen(100%, auto);
+            }
+        }
+    }
+
+    // Grid - Index
+    #contenido-index {
+        .section-3,
+        .section-4,
+        .section-5 {
+            h2 {
+                font-size: 3.5rem;
+                font-weight: 700;
+                letter-spacing: .1rem;
+            }
+        }
+        .grid-main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 5rem 0;
+
+            section {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                margin: 2.6rem;
+
+                img {
+                    width: 8rem;
+                    align-self: center;
+                }
+            }
+
+            p {
+                font-size: 2rem;
+                margin: 1rem;
+            }
+        }
+    }
+
+    &__div__tests { // Testimonios
+        padding: 4rem;
+        &__h2 {
+            letter-spacing: .2rem;
+            text-shadow: 0 0 6px #000;
+            @include spacing(6rem, 2rem);
+            .contenedor-t {
+                margin: 2.5rem;
+            }
+        }
+    }
+}
+
+h2 .mygames-titulo, .proyecto-p .mygames-titulo {
+    text-decoration: .3rem wavy underline #f54b64;
+}

@@ -1,0 +1,34 @@
+@mixin spacing($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin imagen($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// Media Queries
+@mixin mobile { // Telefono
+    @media screen and (min-width: 320px) and (max-width: 550px) {
+        @content;
+    }
+}
+
+@mixin mobile-2 { // Telefono
+    @media all and (min-width: 551px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin tablet { // Tablet
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop { // Escritorio
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}

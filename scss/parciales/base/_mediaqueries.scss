@@ -1,0 +1,754 @@
+// Media Queries
+@include mobile { // Telefono
+    html {
+        font-size: 35%; /* 1rem == 10px */
+        font-family: 'Lato', Helvetica, sans-serif;
+    }
+
+    .grid-index {
+        display: grid;
+        grid-template-areas:"header"
+                            "main "
+                            "footer";
+    }
+
+    .grid-index header {
+        grid-area: header;
+    } 
+
+    .grid-index main {
+        grid-area: main;
+    }
+
+    .grid-index footer {
+        grid-area: footer;
+    }
+
+    /*::::::::::::::::Header::::::::::::::*/
+    .header {
+        width: 100%;
+        height: auto;
+    }
+
+    .header .header__logo {
+        font-size: 3.2rem;
+    }
+
+    .flex-header {
+        flex-direction: column;
+    }
+
+    .flex-header .header__nav__list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header__nav__list li {
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+
+    .header .header__button {
+        padding: 2rem;
+        font-size: 1.5rem;
+    }
+
+    /*::::::::::: Main ::::::::::::*/
+    .main__sections .main__sections__flex {
+        flex-direction: column-reverse;
+    }
+
+    .main__sections__flex .main__sections__flex__left h1,
+    .main__sections__flex .main__sections__flex__left p {
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .main__sections__flex__left {
+        h1 {
+            text-shadow:-2px 3px 0 $color-primary, 
+                        -4px 6px 0 rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    .main__sections__flex .main__sections__flex__right img {
+        width: 40rem;
+    }
+
+    #contenido-index {
+        .grid-main {
+            .a-nosotros {
+                color: $color-primary;
+            }
+        }
+    }
+
+    #contenido-index .grid-main {
+        grid-template-columns: none !important; //Quitar el !important y averiguar el problema
+        grid-template-areas:"card-1"
+                            "card-2"
+                            "card-3";
+    }
+
+    #contenido-index .grid-main section p {
+        font-size: 2.7rem;
+    }
+
+    .section-3 {
+        grid-area: card-1;
+    }
+
+    .section-4 {
+        grid-area: card-2;
+    }
+
+    .section-5 {
+        grid-area: card-3;
+    }
+
+    /*:::::::::::: Calesita ::::::::::::::*/
+    .carousel-none {
+        display: none;
+    }
+
+    /*:::::::::: Sección Proyecto ::::::::::::::*/
+    .contenedor-proyecto {
+        .titulo-prod {
+            font-size: 3.1rem;
+            text-align: center;
+        }
+        .parrafos {
+            font-size: 2rem;
+        }    
+    }
+
+    .img-proyecto {
+        width: 95%;
+    }
+
+    /*:::::::::::: Sección Productos ::::::::::::*/
+    .contenedor-producto {
+        .titulo-prod {
+            font-size: 3.1rem;
+            text-align: center;
+            letter-spacing: .2rem;
+        }
+        .contenido-producto {
+            .flex-productos {
+                img {
+                    margin: 2rem auto;
+                }
+            }
+        }
+    }
+
+    /*::::::::::: Sección Nosotros :::::::::::::*/
+    .contenedor-nosotros {
+        .nosotros-titulo {
+            h1 {
+                font-size: 3.1rem;
+                text-align: center;
+                letter-spacing: .2rem;
+            }
+        }
+        .nosotros-p {
+            .parrafos {
+                font-size: 2.2rem;
+            }
+        }
+        .img-nosotros {
+            width: 95%;
+        }
+    }
+
+    /*:::::::::::::::::: Sección Contacto :::::::::::::::::*/
+    form {
+        @include spacing(4.5rem, 3.5rem);
+        .title-contact {
+            font-size: 4rem;
+            letter-spacing: 1px;
+            margin-bottom: 4rem;
+            text-shadow:-2px 2px 0 #0f8b81, 
+                        -4px 4px 0 rgba(0, 0, 0, 0.4);
+        }
+        input {
+            font-size: 2rem;
+            @include spacing(1rem 0, 1.5rem);
+            border-radius: 1rem;
+        }
+        div {
+            label {
+                font-size: 2.3rem;
+                font-weight: 700;
+                letter-spacing: 1.3px;
+            }
+            select {
+                font-size: 1.8rem;
+                font-weight: 400;
+                border-radius: 1rem;
+            }
+        }
+        .div-1 {
+            .op-1, .op-2 {
+                font-size: 1.9rem;
+            }
+            input[type=radio] {
+                @include imagen(2.3rem, 2.3rem);
+            }
+        }
+        .div-5 {
+            textarea {
+                width: 100%;
+                font-size: 2rem;
+            }
+            textarea:focus {
+                width: 100%;
+            }
+        }
+        .div-6 {
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+
+    /*::::::::::::::Footer :::::::::::::::::::*/
+    .flex-footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .flex-footer .footer__list {
+        margin: 0;
+    }
+
+    .flex-footer .footer__p {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@include mobile-2 { // Telefono 2
+    .grid-index {
+        display: grid;
+        grid-template-areas:"header"
+                            "main"
+                            "footer";
+    }
+    
+    .grid-index header {
+        grid-area: header;
+    } 
+    
+    .grid-index main {
+        grid-area: main;
+    }
+    
+    .grid-index footer {
+        grid-area: footer;
+    }
+    /*::::Header::::::*/
+    .header {
+        width: 100%;
+        height: auto;
+    }
+
+    .header .header__logo {
+        font-size: 3rem;
+    }
+
+    .flex-header {
+        flex-direction: column;
+    }
+
+    .flex-header .header__nav__list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header__nav__list li {
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+
+    .header .header__button {
+        padding: 2rem;
+        font-size: 1.5rem;
+    }
+
+    /*:::::Main:::::::*/
+    main .main__sections__flex {
+        flex-direction: column-reverse;
+    }
+
+    .main__sections__flex .flex-left h1,
+    .main__sections__flex .flex-left p {
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .main__sections__flex .flex-right img {
+        width: 40rem;
+    }
+
+    #contenido-index .grid-main {
+        grid-template-columns: none;
+        grid-template-areas:"card-1"
+                            "card-2"
+                            "card-3";
+    }
+
+    #contenido-index .grid-main section p {
+        font-size: 2.7rem;
+    }
+
+    .section-3 {
+        grid-area: card-1;
+    }
+
+    .section-4 {
+        grid-area: card-2;
+    }
+
+    .section-5 {
+        grid-area: card-3;
+    }
+
+    /*:::::::Sección Proyecto:::::::::::*/
+    .contenedor-proyecto .titulo-prod {
+        font-size: 3.1rem;
+        text-align: center;
+    }
+
+    .contenedor-proyecto .parrafos {
+        font-size: 2.4rem;
+    }
+
+    .img-proyecto {
+        max-width: 95%;
+    }
+
+    /*::::::::::: Sección Productos :::::::::::::*/
+    .contenedor-producto {
+        .titulo-prod {
+            font-size: 3.5rem;
+            text-align: center;
+            letter-spacing: .2rem;
+        }
+        .contenido-producto {
+            .flex-productos {
+                img {
+                    margin: 2rem auto;
+                }
+            }
+        }
+    }
+
+    /*:::::Sección Nosotros::::::*/
+    .contenedor-nosotros {
+        .nosotros-titulo {
+            h1 {
+                font-size: 3.1rem;
+                text-align: center;
+                letter-spacing: .2rem;
+            }
+        }
+        .nosotros-p {
+            .parrafos {
+                font-size: 2.2rem;
+            }
+        }
+        .img-nosotros {
+            width: 95%;
+        }
+    }
+
+    /*:::::::Sección Contacto::::::::*/
+    form {
+        @include spacing(4.5rem, 3.5rem);
+        .title-contact {
+            font-size: 4rem;
+            letter-spacing: 1px;
+            margin-bottom: 4rem;
+            text-shadow:-2px 2px 0 #0f8b81, 
+                        -4px 4px 0 rgba(0, 0, 0, 0.4);
+        }
+        input {
+            font-size: 2rem;
+            @include spacing(1rem 0, 1.5rem);
+            border-radius: 1rem;
+        }
+        div {
+            label {
+                font-size: 2.3rem;
+                font-weight: 700;
+                letter-spacing: 1.3px;
+            }
+            select {
+                font-size: 1.8rem;
+                font-weight: 400;
+                border-radius: 1rem;
+            }
+        }
+        .div-1 {
+            .op-1, .op-2 {
+                font-size: 1.9rem;
+            }
+            input[type=radio] {
+                @include imagen(2.3rem, 2.3rem);
+            }
+        }
+        .div-5 {
+            textarea {
+                width: 100%;
+                font-size: 2rem;
+            }
+            textarea:focus {
+                width: 100%;
+            }
+        }
+        .div-6 {
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+
+    /*:::::::Footer::::::*/
+    .flex-footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .flex-footer .footer__list {
+        margin: 0;
+    }
+
+    .flex-footer .footer__p {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@include tablet { // Tablet
+    html {
+        font-size: 57%;
+    }
+
+    /* Header */
+    .header {
+        height: 34vh;
+    }
+
+    .flex-header {
+        flex-direction: column;
+    }
+
+    .header .header__logo {
+        font-size: 4.2rem;
+    }
+
+    .flex-header .header__nav__list {
+        flex-direction: row;
+    }
+
+    .header__nav__list .listas {
+        font-size: 2rem;
+    }
+
+    .header .header__button {
+        padding: 2rem;
+        font-size: 1.5rem;
+    }
+
+    /*:::::Inicio::::::::*/
+    #contenido-index {
+        .grid-main {
+            .a-nosotros {
+                color: $color-primary;
+            }
+        }
+    }
+
+    /*:::::: Seccion Proyecto :::::::*/
+    .contenedor-proyecto .titulo-prod {
+        font-size: 3.7rem;
+        text-align: center;
+    }
+
+    .contenedor-proyecto .parrafos {
+        font-size: 2.7rem;
+    }
+
+    .img-proyecto {
+        max-width: 95%;
+    }
+
+    /*:::::::Sección Productos::::::::*/
+    .contenedor-producto {
+        .titulo-prod {
+            font-size: 3.7rem;
+            text-align: center;
+            letter-spacing: .1rem;
+        }
+        .contenido-producto {
+            .flex-productos {
+                img {
+                    margin: 2rem auto;
+                }
+            }
+        }
+    }
+
+    /*::::::Sección Nosotros:::::::*/
+    .contenedor-nosotros {
+        .nosotros-titulo {
+            h1 {
+                font-size: 3.7rem;
+                text-align: center;
+                letter-spacing: .2rem;
+            }
+        }
+        .nosotros-p {
+            .parrafos {
+                font-size: 2.6rem;
+            }
+        }
+        .img-nosotros {
+            width: 95%;
+        }
+    }
+
+    /*:::::::Sección Contacto::::::::*/
+    form {
+        @include spacing(4.5rem, 3.5rem);
+        .title-contact {
+            font-size: 4.5rem;
+            text-shadow:-3px 3px 0 #0f8b81, 
+                        -5px 6px 0 rgba(0, 0, 0, 0.4);
+        }
+        input {
+            font-size: 1.5rem;
+        }
+        div {
+            label {
+                font-size: 2.1rem;
+                letter-spacing: 1px;
+            }
+            select {
+                font-size: 1.6rem;
+            }
+        }
+        .div-1 {
+            .op-1, .op-2 {
+                font-size: 1.8rem;
+            }
+            input[type=radio] {
+                @include imagen(2rem, 2rem);
+            }
+        }
+        .div-5 {
+            textarea {
+                width: 100%;
+                font-size: 1.7rem;
+            }
+        }
+        .div-6 {
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+
+    /*:::::: Footer ::::::*/
+    .flex-footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@include desktop { // Escritorio
+    html {
+        font-size: 60.5%;
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+    body {
+        margin-right: 0;
+        font-size: 60.5%;
+        max-width: 100%;
+    }
+
+    /*:::::Header:::::::*/
+    .header {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .header .header__logo {
+        font-size: 5rem;
+    }
+
+    .flex-header {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .header .header__button {
+        padding: .9rem 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    /*::::::Main::::::*/
+    main .main__sections__flex {
+        flex-direction: row;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+
+    .main__sections__flex .flex-left h1,
+    .main__sections__flex .flex-left p {
+        text-align: start;
+        line-height: 1.2;
+    }
+
+    .main__sections__flex .flex-right img {
+        width: 100%;
+    }
+
+    #contenido-index .grid-main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "card-1 card-2 card-3";
+    }
+
+    #contenido-index .grid-main section p {
+        font-size: 2rem;
+    }
+
+    /*::::::Sección Proyecto::::::*/
+    .contenedor-proyecto .titulo-prod {
+        font-size: 5rem;
+        text-align: left;
+    }
+
+    .contenedor-proyecto .parrafos {
+        font-size: 3rem;
+    }
+
+    .img-proyecto {
+        max-width: 100%;
+    }
+
+    /*::::::Sección Productos:::::::*/
+    .contenedor-producto {
+        .titulo-prod {
+            font-size: 5rem;
+            text-align: left;
+            letter-spacing: .2rem;
+        }
+        .contenido-producto {
+            .flex-productos {
+                img {
+                    margin: 2.5rem;
+                }
+            }
+        }
+    }
+
+    /*::::::::Sección Nosotros:::::::::::*/
+    .contenedor-nosotros {
+        .nosotros-titulo {
+            h1 {
+                font-size: 5rem;
+                text-align: left;
+                letter-spacing: .2rem;
+            }
+        }
+        .nosotros-p {
+            .parrafos {
+                font-size: 3rem;
+            }
+        }
+        .img-nosotros {
+            width: 100%;
+        }
+    }
+
+    /*::::::::Sección Contacto::::::::*/
+    form {
+        @include spacing(5.5rem 9rem, 5rem);
+        input {
+            font-size: 1.7rem;
+            border-radius: 1.2rem;
+        }
+        div {
+            label {
+                font-size: 2.5rem;
+                letter-spacing: 1px;
+            }
+            select {
+                font-size: 1.6rem;
+                font-weight: 400;
+                border-radius: 1.2rem;
+            }
+        }
+        .title-contact {
+            font-size: 6rem;
+            margin-bottom: 3rem;
+            text-shadow:-4px 4px 0 #0f8b81, 
+                        -8px 9px 0 rgba(0, 0, 0, 0.4);
+        }
+        .form-container {
+            div {
+                display: flex;
+                flex-flow: column wrap;
+                font-size: 1.5rem;
+                margin: 1.5rem 0;
+            }
+        }
+        .div-1 {
+            .op-1, .op-2 {
+                font-size: 2.2rem;
+            }
+            input[type=radio] {
+                @include imagen(2rem, 2rem);
+            }
+        }
+        .div-5 {
+            textarea {
+                font-size: 1.7rem;
+                width: 50%;
+                transition: .6s;
+            }
+            textarea:focus {
+                width: 100%;
+                outline: none;
+            }
+        }
+        .div-6 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+
+    /*::::::Footer:::::::::*/
+    .flex-footer {
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .flex-footer .footer__list {
+        margin-left: 5rem;
+        width: 25rem;
+        justify-content: space-between;
+    }
+    
+    .flex-footer .footer__p  {
+        text-align: right;
+        margin-right: 5rem;
+    }
+}

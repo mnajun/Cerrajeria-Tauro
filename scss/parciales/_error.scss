@@ -1,0 +1,46 @@
+// Error 404
+.main__error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15rem;
+    &__img {
+        width: 35%;
+        margin-left: 15rem;
+    }
+    &__div {
+        margin: 0 5rem;
+        &__h1 {
+            font-size: 8rem;
+            font-weight: 900;
+            letter-spacing: .2rem;
+            margin-bottom: 1rem;
+        }
+        &__p {
+            font-size: 3.4rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
+        &__btn {
+            padding: 1.7rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 1rem;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+            background-color: $color-primary;
+            transition: all 0.2s;
+        }
+        &__btn:hover {
+            background-color: #ca4257;
+        }
+    }
+}
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Priva

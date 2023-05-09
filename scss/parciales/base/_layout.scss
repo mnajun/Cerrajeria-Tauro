@@ -1,0 +1,15 @@
+.grid-main {
+    display: grid;
+    grid-template-areas:"header header header"
+                        "main main main"
+                        "footer footer footer";
+    header {
+        grid-area: header;
+    }
+    main {
+        grid-area: main;
+    }
+    footer {
+        grid-area: footer;
+    }
+}

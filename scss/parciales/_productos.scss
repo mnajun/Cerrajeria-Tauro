@@ -1,0 +1,31 @@
+// Productos
+.contenedor-producto {
+    @include spacing(7rem, 7rem);
+    background-color: #53575f;
+    border-radius: 2rem;
+    border: 5px solid #ee4962;
+    box-shadow: 0 0 3rem 1.5rem $color-primary;
+    .contenido-producto {
+        .flex-productos {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            img {
+                cursor: pointer;
+                margin: 2.5rem;
+                max-width: 25rem;
+                border-radius: 1rem;
+                box-shadow: none;
+                transition: all 0.3s;
+            }
+            img:hover {
+                box-shadow: 0px 15px 10px -5px rgba(0,0,0,0.75);
+                transform: scale(1.1);
+            }
+        }
+    }
+    .titulo-prod {
+        margin-bottom: 3rem;
+        text-shadow: 0 0 10px #000;
+    }
+}

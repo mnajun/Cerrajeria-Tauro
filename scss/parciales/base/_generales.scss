@@ -1,0 +1,72 @@
+// Main
+main {
+    a:hover {
+        color: #f54b64;
+    }
+    .enlaces {
+        position: relative;
+    }
+    .enlaces::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: .2rem;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 220ms ease-in;
+    }
+    .enlaces:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+// Otros
+.centrar {
+    text-align: center;
+}
+
+.enlaces {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.parrafos {
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    display: inline-block;
+}
+
+.titulos {
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.listas {
+    list-style: none;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Barra de Scroll */
+::-webkit-scrollbar {
+    width: 1.2rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(172, 57, 77);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(350, 75%, 60%);
+    border-radius: 5rem;
+}
+
+/* Cuando selecciona con el mouse */
+::selection {
+    background-color: #f5566e;
+    color: #fff;
+}

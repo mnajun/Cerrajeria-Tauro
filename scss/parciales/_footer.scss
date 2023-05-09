@@ -1,0 +1,38 @@
+.footer {
+    background-color: $color-footer;
+    padding: 2rem;
+    &__list {
+        width: 25rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .iconos-redes {
+            width: 100%;
+            margin: 1rem .5rem;
+        }
+    }
+    &__p {
+        text-align: right;
+        font-size: 2rem;
+        font-weight: 400;
+        font-style: italic;
+        margin-right: 5rem;
+    }
+}
+
+.flex-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer__list {
+        margin-left: 5rem;
+    }
+}
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Sta
